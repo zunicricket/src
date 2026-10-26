@@ -262,11 +262,12 @@ const romanUrduText = {
 
 function App() {
   const [language, setLanguage] = useState('English')
+  const [showAbout, setShowAbout] = useState(false)
   const [showHelp, setShowHelp] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState(null)
   const [searchText, setSearchText] = useState('')
   const [chatOpen, setChatOpen] = useState(false)
-  
+
 const [chatMessages, setChatMessages] = useState([])
 const [chatInput, setChatInput] = useState('')
 const [chatLoading, setChatLoading] = useState(false)
@@ -602,9 +603,50 @@ const sendMessage = async () => {
   
       </main>
 
+      
+      {showAbout && (
+        <section className="about-section">
+          <h2>About CyberSakhi</h2>
+          <p>
+            CyberSakhi is an online safety awareness platform
+            that helps people understand what to do about online
+            harassment, cyberbullying, blackmail, fake accounts,
+            and threats involving private photos.
+          </p>
+          <p>
+            It provides simple guidance, social media reporting
+            instructions, and links to official cybercrime
+            complaint resources in Pakistan.
+          </p>
+          <p>
+            CyberSakhi promotes online safety, privacy, dignity,
+            and awareness. It provides information and does not
+            submit official complaints on the user's behalf.
+          </p>
+
+          <h3>Developed by Zinara</h3>
+          <p>Student developer · CyberSakhi Project</p>
+          <a
+            href="https://github.com/zunicricket/src"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View project on GitHub ↗
+          </a>
+        </section>
+      )}
+
       <footer>
         CyberSakhi · Safety, dignity and support
+        <br />
+        <button
+          className="about-button"
+          onClick={() => setShowAbout(!showAbout)}
+        >
+          {showAbout ? 'Close About Us' : 'About Us'}
+        </button>
       </footer>
+
     </div>
   )
 }
