@@ -395,6 +395,19 @@ const sendMessage = async () => {
 
 <main>
 
+        <section className="hero">
+          <div className="welcome-icon">💜</div>
+          <p className="hero-badge">YOUR SAFE SPACE ONLINE</p>
+          <h1>Welcome to CyberSakhi</h1>
+          <p className="hero-tagline">
+            Your safety, your choice.
+          </p>
+          <p className="intro">
+            You are not alone. Get clear guidance when facing online
+            harassment, threats, bullying or blackmail.
+          </p>
+        </section>
+
         <div className="language">
           <label htmlFor="language">
   {translate('Choose language:')}
